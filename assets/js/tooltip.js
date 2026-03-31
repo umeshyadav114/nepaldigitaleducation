@@ -1,6 +1,6 @@
 const tooltips = {
     fb_messenger: "FB Messenger",
-    home: "Home of WebWise",
+    home: "Home of Nepal Digital Education",
     discord: "Discord",
     signIn: "Sign In",
     signUp: "Sign Up",

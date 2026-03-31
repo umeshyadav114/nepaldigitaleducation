@@ -2340,3 +2340,46 @@ section.container p {
     grid-template-columns: 1fr;
   }
 }
+
+.auth-form {
+    max-width: 35rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+.auth-form label {
+    color: var(--neutral-200);
+    font-weight: 500;
+}
+.auth-form input,
+.auth-form textarea {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--neutral-100);
+}
+.auth-form input::placeholder,
+.auth-form textarea::placeholder {
+    color: var(--neutral-500);
+}
+.course-video-card {
+    margin: 1rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.course-video {
+    width: 100%;
+    display: block;
+    max-height: 500px;
+}
+.section-container ul {
+    list-style: disc inside;
+    color: var(--neutral-300);
+}
+.section-container ul li {
+    margin: 0.5rem 0;
+}

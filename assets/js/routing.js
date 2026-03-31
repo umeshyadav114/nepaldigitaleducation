@@ -46,11 +46,19 @@ const routes = {
     c1_l4_p5: "../../../pages/courses/c1/c1l4/c1l4p5.html",
     c1_l4_p6: "../../../pages/courses/c1/c1l4/c1l4p6.html",
 };
+const c2Anchors = new Set(["c2_l1", "c2_l2", "c2_l3", "c2_l4"]);
+const currentPath = window.location.pathname.replace(/\\/g, "/");
+function getRoute(key) {
+    if (c2Anchors.has(key) && currentPath.includes("/pages/courses/c2/index.html")) {
+        return `#lesson${key.slice(-1)}`;
+    }
+    return routes[key] || null;
+}
 document.addEventListener("DOMContentLoaded", () => {
     const c = document.querySelectorAll(".hyperlink");
     c.forEach((c) => {
         const l = c.getAttribute("data-location"),
-            s = routes[l] || routes[404];
+            s = getRoute(l) || "";
         c.setAttribute("href", s);
     }),
         c.forEach((c) => {
@@ -62,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         e = await (async function (c) {
                             return new Promise((l) => {
                                 setTimeout(() => {
-                                    l(routes[c] || null);
+                                    l(getRoute(c));
                                 }, 750);
                             });
                         })(l);
