@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../../assets/css/style.min.css" />
+        <link rel="stylesheet" href="../../../assets/css/style.css" />
         <link rel="shortcut icon" href="../../../assets/images/svgs/logo.svg" type="image/x-icon" />
         <title>Nepal Digital Education | Fundamentals</title>
     </head>
@@ -137,31 +137,38 @@
                             <img src="../../../assets/images/pngs/book.png" alt="course icon" />
                             <h1 class="header-title">नयाब सुब्बा-द्वितीय पत्र</h1>
                         </div>
-                        <!-- <article>
-                            <h3 class="article-header">द्वितीय पत्र </h3>
-                            <p class="paragraph" id="lesson1"> 
-                                Welcome to the Fundamentals of Web Development course, where you will dive deep into essential
-                                concepts like HTML, CSS, and webpage structure. Gain practical skills to create engaging web experience from
-                                scratch.
-                            </p>
-                        </article> -->
-                        <article>                            <h3 class="article-header">Lesson Preview</h3>
-                            <div class="course-video-card">
-                                <video class="course-video" controls preload="metadata" poster="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
-                                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
-                                    Your browser does not support HTML video.
-                                </video>
-                            </div>
-                            <p class="paragraph">Watch this short preview lesson to experience our live coaching pace and teaching style.</p>
-                        </article>
-                        <article>                            <div class="lesson-list-container" course-key="course_1">
-                                <h3 class="article-header" id="lesson2">1.नेपालको भौगोलिक, सामाजिक र आर्थिक अवस्था खण्ड (A)</h3>
-                                <div class="lesson-list" lesson-key="1">
-                                    <div class="lesson-list-items"></div>
+                        <div class="course-player-layout">
+                            <div class="main-video-section">
+                                <div class="course-video-card">
+                                    <video id="main-video-player" class="course-video" controls preload="metadata">
+                                        <source id="main-video-source" src="" type="video/mp4" />
+                                        Your browser does not support HTML video.
+                                    </video>
                                 </div>
-                               
+                                <div class="video-info">
+                                    <h3 id="current-video-title">Select a lesson to start watching</h3>
+                                    <p id="current-video-description">Choose from the chapters below to begin your learning journey.</p>
+                                </div>
                             </div>
-                        </article>
+                            <div class="course-tabs">
+                                <div class="tab-buttons">
+                                    <button class="tab-btn active" data-tab="lessons">Lessons</button>
+                                    <button class="tab-btn" data-tab="notes">Notes</button>
+                                </div>
+                                <div class="tab-content">
+                                    <div id="lessons-tab" class="tab-pane active">
+                                        <div id="chapters-list" class="chapters-list">
+                                            <!-- Chapters will be loaded here -->
+                                        </div>
+                                    </div>
+                                    <div id="notes-tab" class="tab-pane">
+                                        <div id="lesson-notes" class="lesson-notes">
+                                            <p>Select a lesson to view notes and additional resources.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -276,7 +283,6 @@
         <script src="../../../assets/js/routing.js"></script>
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
-        <script src="../../../assets/js/tooltip.js"></script>
-    </body>
+        <script src="../../../assets/js/tooltip.js"></script>        <script src="../../../assets/js/course-player.js"></script>    </body>
 
 </html>
