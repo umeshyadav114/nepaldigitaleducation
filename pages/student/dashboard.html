@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.min.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="shortcut icon" href="/assets/images/svgs/logo.svg" type="image/x-icon" />
+  <title>Student Dashboard | Nepal Digital Education</title>
+</head>
+
+<body>
+  <header class="section-container">
+    <div class="section-header">
+      <h1 class="header-title">Student Learning Dashboard</h1>
+      <div class="dashboard-actions">
+        <span>Welcome, <strong id="student-name">Student</strong></span>
+        <button id="student-logout" class="sec-btn">Logout</button>
+      </div>
+    </div>
+    <p class="paragraph">Access your available lesson videos here. New lessons appear automatically once the admin uploads them.</p>
+    <div id="student-dashboard-alert" class="alert-message" style="display:none;"></div>
+  </header>
+
+  <main animate="fadeIn">
+    <div class="main-wrapper">
+      <section class="section-container">
+        <div id="student-video-grid" class="grid-2"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/assets/js/student-dashboard.js"></script>
+</body>
+
+</html>

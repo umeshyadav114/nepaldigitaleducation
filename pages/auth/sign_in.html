@@ -51,7 +51,7 @@
                         <h1 class="header-title">Sign In</h1>
                     </div>
                     <article>
-                        <form class="auth-form" action="#" method="post">
+                        <form id="sign-in-form" class="auth-form" action="#" method="post">
                             <label for="email">Email</label>
                             <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
@@ -60,6 +60,7 @@
 
                             <button type="submit" class="pri-btn">Sign In</button>
                         </form>
+                        <div id="sign-in-alert" class="alert-message" style="display:none;"></div>
                     </article>
                     <article>
                         <p class="paragraph">New to Nepal Digital Education? <a href="sign_up.html">Create an account</a> to start learning.</p>
@@ -101,6 +102,7 @@
             </div>
         </div>
     </footer>
+    <script src="/assets/js/auth.js"></script>
 </body>
 
 </html>

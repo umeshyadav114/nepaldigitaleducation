@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.min.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="shortcut icon" href="/assets/images/svgs/logo.svg" type="image/x-icon" />
+  <title>Admin Login | Nepal Digital Education</title>
+</head>
+
+<body>
+  <main animate="fadeIn">
+    <div class="main-wrapper">
+      <section>
+        <div class="section-container">
+          <div class="section-header">
+            <img src="/assets/images/pngs/book.png" alt="Admin login icon" />
+            <h1 class="header-title">Admin Dashboard Login</h1>
+          </div>
+          <article>
+            <form id="admin-login-form" class="auth-form" action="#" method="post">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="admin@ndeducation.com" required />
+
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="••••••••" required />
+
+              <button type="submit" class="pri-btn">Sign in as admin</button>
+            </form>
+            <div id="admin-login-alert" class="alert-message" style="display:none;"></div>
+          </article>
+          <article>
+            <p class="paragraph">Use the admin login to upload lesson videos and manage student access.</p>
+            <p class="paragraph">Student login is available at <a href="/pages/auth/sign_in.html">Student Sign In</a>.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/assets/js/admin-auth.js"></script>
+</body>
+
+</html>

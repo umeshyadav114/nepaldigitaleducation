@@ -2383,3 +2383,45 @@ section.container p {
 .section-container ul li {
     margin: 0.5rem 0;
 }
+.alert-message {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 0.85rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    display: none;
+}
+.alert-success {
+    background: rgba(56, 190, 131, 0.15);
+    color: #38b;  /* fallback for older browsers */
+    color: var(--success, #24b47e);
+}
+.alert-error {
+    background: rgba(240, 101, 113, 0.16);
+    color: #f06571;
+}
+.dashboard-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.video-card {
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255,255,255,0.03);
+}
+.video-card-content {
+    display: grid;
+    gap: 0.75rem;
+}
+.section-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}

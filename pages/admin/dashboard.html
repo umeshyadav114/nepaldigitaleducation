@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.min.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="shortcut icon" href="/assets/images/svgs/logo.svg" type="image/x-icon" />
+  <title>Admin Dashboard | Nepal Digital Education</title>
+</head>
+
+<body>
+  <header class="section-container">
+    <div class="section-header">
+      <h1 class="header-title">Admin Dashboard</h1>
+      <div class="dashboard-actions">
+        <span>Welcome, <strong id="admin-name">Admin</strong></span>
+        <button id="admin-logout" class="sec-btn">Logout</button>
+      </div>
+    </div>
+    <p class="paragraph">Upload lesson videos and create student accounts from one secure admin panel.</p>
+    <div id="admin-dashboard-alert" class="alert-message" style="display:none;"></div>
+  </header>
+
+  <main animate="fadeIn">
+    <div class="main-wrapper">
+      <section class="section-container">
+        <article>
+          <h2 class="article-header">Upload New Lesson Video</h2>
+          <form id="video-upload-form" class="auth-form" action="#" method="post" enctype="multipart/form-data">
+            <label for="title">Lesson Title</label>
+            <input id="title" name="title" type="text" placeholder="Subject name or lesson title" required />
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Short lesson summary" required></textarea>
+
+            <label for="video">Video File</label>
+            <input id="video" name="video" type="file" accept="video/*" required />
+
+            <button type="submit" class="pri-btn">Upload Lesson</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="section-container">
+        <article>
+          <h2 class="article-header">Create Student Account</h2>
+          <form id="create-student-form" class="auth-form" action="#" method="post">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Student name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="student@example.com" required />
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Strong password" required />
+
+            <button type="submit" class="pri-btn">Create Student</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="section-container">
+        <article>
+          <h2 class="article-header">Uploaded Lessons</h2>
+          <div id="uploaded-video-list"></div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <script src="/assets/js/admin-dashboard.js"></script>
+</body>
+
+</html>

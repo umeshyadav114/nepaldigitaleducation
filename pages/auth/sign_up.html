@@ -51,7 +51,7 @@
                         <h1 class="header-title">Get Started</h1>
                     </div>
                     <article>
-                        <form class="auth-form" action="#" method="post">
+                        <form id="sign-up-form" class="auth-form" action="#" method="post">
                             <label for="name">Name</label>
                             <input id="name" name="name" type="text" placeholder="Your full name" required />
 
@@ -63,6 +63,7 @@
 
                             <button type="submit" class="pri-btn">Create account</button>
                         </form>
+                        <div id="sign-up-alert" class="alert-message" style="display:none;"></div>
                     </article>
                     <article>
                         <p class="paragraph">Already have an account? <a href="sign_in.html">Sign in</a> now to access your learning path.</p>
@@ -104,6 +105,7 @@
             </div>
         </div>
     </footer>
+    <script src="/assets/js/auth.js"></script>
 </body>
 
 </html>
