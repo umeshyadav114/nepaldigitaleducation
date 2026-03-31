@@ -145,6 +145,15 @@ app.get('/api/me', authMiddleware, async (req, res) => {
   res.json({ id: user.id, name: user.name, email: user.email, role: user.role });
 });
 
+app.get('/api/public/videos', async (req, res) => {
+  const db = await readDb();
+  const videos = (db.videos || []).map((video) => ({
+    ...safeJson(video),
+    url: `/videos/${video.filename}`
+  }));
+  res.json(videos);
+});
+
 app.get('/api/videos', authMiddleware, async (req, res) => {
   const db = await readDb();
   const videos = (db.videos || []).map((video) => safeJson(video));

@@ -2425,3 +2425,17 @@ section.container p {
     padding: 1.25rem;
     margin-bottom: 1.5rem;
 }
+.course-video-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 1.5rem;
+}
+.course-video-grid .section-card {
+    padding: 1rem;
+}
+.updated-lesson-note {
+    display: block;
+    margin-top: 1rem;
+    color: var(--neutral-400);
+}
